@@ -83,6 +83,7 @@ public class TicketMachine
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
+            
 
             // Update the total collected with the balance.
             total = total + price;
@@ -93,4 +94,10 @@ public class TicketMachine
             System.out.println("not enough money inserted");
         }
     }
+    public int refundBalance(){
+        int currentBalance = balance;
+        balance = 0;
+        return currentBalance;   
+    }
+    
 }

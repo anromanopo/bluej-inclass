@@ -14,4 +14,6 @@ comment3.text=\n\ Receive\ an\ amount\ of\ money\ from\ a\ customer.\n
 comment4.params=
 comment4.target=void\ printTicket()
 comment4.text=\n\ Print\ a\ ticket.\n\ Update\ the\ total\ collected\ and\n\ reduce\ the\ balance\ to\ zero.\n
-numComments=5
+comment5.params=
+comment5.target=int\ refundBalance()
+numComments=6
