@@ -9,6 +9,7 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2011.07.31
  */
+
 public class TicketMachine
 {
     // The price of a ticket from this machine.
@@ -23,9 +24,15 @@ public class TicketMachine
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int price)
     {
-        price = cost;
+        // check for a sensible price given to the constructor
+        if (price > 0){
+            this.price = price;
+        } else {
+            System.out.println("Price must not be negative");
+            price = 0;
+        }
         balance = 0;
         total = 0;
     }
@@ -52,7 +59,12 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        balance = balance + amount;
+        //check if the inserted amount is not negative
+        if(amount < 0){
+            System.out.println("please insert a positive value");
+        } else {
+            balance = balance + amount;
+        }
     }
 
     /**
@@ -62,17 +74,23 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        // Simulate the printing of a ticket.
-        System.out.println("##################");
-        System.out.println("# The BlueJ Line");
-        System.out.println("# Ticket");
-        System.out.println("# " + price + " cents.");
-        System.out.println("##################");
-        System.out.println();
+        // only issue a ticket if enough money was inserted
+        if (balance >= price){
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+            System.out.println();
 
-        // Update the total collected with the balance.
-        total = total + balance;
-        // Clear the balance.
-        balance = 0;
+            // Update the total collected with the balance.
+            total = total + balance;
+            // Clear the balance.
+            // balance should not be set to 0 after ticket is printed.
+            balance = balance - price;
+        } else {
+            System.out.println("not enough money inserted");
+        }
     }
 }
