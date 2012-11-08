@@ -85,7 +85,7 @@ public class TicketMachine
             System.out.println();
 
             // Update the total collected with the balance.
-            total = total + balance;
+            total = total + price;
             // Clear the balance.
             // balance should not be set to 0 after ticket is printed.
             balance = balance - price;
