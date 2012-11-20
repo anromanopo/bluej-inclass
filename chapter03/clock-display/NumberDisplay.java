@@ -13,7 +13,7 @@
 public class NumberDisplay
 {
     private int limit;
-    private int value;
+    private int value = 0;
 
     /**
      * Constructor for objects of class NumberDisplay.
@@ -22,7 +22,7 @@ public class NumberDisplay
     public NumberDisplay(int rollOverLimit)
     {
         limit = rollOverLimit;
-        value = 0;
+        //    value = 0;
     }
 
     /**
@@ -65,6 +65,11 @@ public class NumberDisplay
      */
     public void increment()
     {
-        value = (value + 1) % limit;
+        // value = (value + 1) % limit;
+        value = value + 1;
+        if (value >= limit){
+            value = 0;
+        }
+
     }
 }
