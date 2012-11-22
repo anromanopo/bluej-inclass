@@ -9,23 +9,27 @@ import java.util.ArrayList;
 public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
-    private ArrayList<String> files;
+    private ArrayList<Track> files;
 
     /**
      * Create a MusicOrganizer
      */
     public MusicOrganizer()
     {
-        files = new ArrayList<String>();
+        files = new ArrayList<Track>();
     }
 
     /**
      * Add a file to the collection.
      * @param filename The file to be added.
      */
-    public void addFile(String filename)
+    public void addFile(Track track)
     {
-        files.add(filename);
+        files.add(track);
+    }
+
+    public void addFile(String artist, String title, String fileName){
+        files.add(new Track(artist,title,fileName));
     }
 
     /**
@@ -44,8 +48,8 @@ public class MusicOrganizer
     public void listFile(int index)
     {
         if(index >= 0 && index < files.size()) {
-            String filename = files.get(index);
-            System.out.println(filename);
+            Track track = files.get(index);
+            System.out.println(track);
         }
     }
 
@@ -62,8 +66,8 @@ public class MusicOrganizer
 
     public void listAllFiles()
     {
-        for(String filename : files) {
-            System.out.println(filename);
+        for(Track track : files) {
+            System.out.println(track);
         }
     } 
 }
