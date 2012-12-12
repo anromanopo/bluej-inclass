@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Responder()
+comment0.text=\n\ Construct\ a\ Responder\ -\ nothing\ to\ do\n
+comment1.params=
+comment1.target=void\ initializeDefaultResponses()
+comment2.params=
+comment2.target=void\ initializeKeyWordResponses()
+comment3.params=input
+comment3.target=java.lang.String\ generateResponse(java.util.HashSet)
+comment3.text=\n\ Generate\ a\ response.\n\ @return\ \ \ A\ string\ that\ should\ be\ displayed\ as\ the\ response\n
+comment4.params=input
+comment4.target=java.lang.String\ pickKeyWordResponse(java.util.HashSet)
+numComments=5
