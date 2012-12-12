@@ -1,0 +1,22 @@
+#BlueJ package file
+package.editor.height=508
+package.editor.width=722
+package.editor.x=30
+package.editor.y=30
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
+project.charset=UTF-8
+target1.height=62
+target1.name=logic
+target1.type=PackageTarget
+target1.width=80
+target1.x=140
+target1.y=60
+target2.height=62
+target2.name=collections
+target2.type=PackageTarget
+target2.width=90
+target2.x=290
+target2.y=60
